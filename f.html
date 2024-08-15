@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Ctrl to Toggle Fullscreen</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        body.fullscreen {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let lastCtrlPress = 0;
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Control') {
+                const now = Date.now();
+                if (now - lastCtrlPress < 500) { // 500ms interval for double press
+                    toggleFullScreen();
+                }
+                lastCtrlPress = now;
+            }
+        });
+
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
