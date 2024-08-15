@@ -27,6 +27,20 @@
                 lastCtrlPress = now;
             }
         });
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, false);
+
+        document.addEventListener('touchend', function(event) {
+            const now = new Date().getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+                toggleFullScreen();
+            }
+            lastTouchEnd = now;
+        }, false);
 
         function toggleFullScreen() {
             if (!document.fullscreenElement) {
