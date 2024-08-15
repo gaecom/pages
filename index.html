@@ -58,7 +58,7 @@
         function renderCards(filter = "") {
             const cardContainer = document.getElementById("cardContainer");
             cardContainer.innerHTML = "";
-            const filteredData = data.filter(item => item.title.includes(filter));
+            const filteredData = data.filter(item => item.title.includes(filter) || item.detail.includes(filter));
             filteredData.forEach(item => {
                 const card = document.createElement("div");
                 card.classList.add("card");
