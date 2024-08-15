@@ -1,0 +1,71 @@
+# Java 相关
+*.class
+*.log
+*.jar
+*.war
+target/
+out/
+generated/
+
+# Python 相关
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+requirements.txt
+
+# Node.js 相关
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnp.*
+
+# Go 相关
+bin/
+pkg/
+*.a
+*.o
+*.so
+*.exe
+goroot/
+gopath/
+go.sum
+go.mod.cache
+
+# Rust 相关
+target/
+Cargo.lock
+Cargo.toml.orig
+*.dSYM/
+*.rmeta
+*.rlib
+
+# 操作系统相关和其他打包文件
+*.iml
+.DS_Store
+Thumbs.db
+.git/
+.gitignore
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.zip
+*.gz
+*.tar.gz
+*.rar
+*.7z
+
+# 特殊情况下的全局排除
+**/*.lock
+**/test/**
+
+# 注意：根据实际情况调整以上规则，确保不会误排除重要文件
