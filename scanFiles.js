@@ -65,7 +65,6 @@ const results = scanFolderForHTMLFiles(folderPath,prefix);
 const bFileContent = fs.readFileSync(index, 'utf-8');
 const updatedContent = bFileContent.replace(/\"#data#\"/, JSON.stringify(results));
 
-console.log(updatedContent)
 fs.writeFileSync(scriptDir+"/index.html", updatedContent, 'utf-8');
 // 输出更新后的内容
 
