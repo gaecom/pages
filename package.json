@@ -1,0 +1,13 @@
+{
+  "name": "pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scanFiles.js",
+  "scripts": {
+    "u":"node scanFiles.js && cf2 ughp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
